@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xác nhận đặt phòng"
+        android:textSize="22dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="#ff0000" />
+    <Spinner
+        android:id="@+id/spn_diadiem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"/>
+    <Spinner
+        android:id="@+id/spn_loaiphong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/edt_dongia"
+        style="@style/TextStyle"
+        android:enabled="false"
+        android:hint="Đơn giá"
+        android:textColor="#ff0000" />
+    <TextView
+        android:id="@+id/txt_ngaybd"
+        style="@style/LabelStyle"
+        android:text="Ngày bắt đầu: "
+        android:onClick="ChonNgay" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_songay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_songay"
+            style="@style/TextStyle"
+            android:background="@color/white"
+            android:hint="Số ngày thuê"
+            android:inputType="number"
+            android:textColor="#ff0000" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_magiamgia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="clear_text" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_magiamgia"
+            style="@style/TextStyle"
+            android:background="@color/white"
+            android:hint="Mã giảm giá (nếu có)"
+            android:textColor="#ff0000" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Dịch vụ khác"
+        android:gravity="center"
+        android:textColor="#ff0000"
+        android:layout_marginTop="10dp"/>
+    <CheckBox
+        android:id="@+id/chk_buasang"
+        style="@style/LabelStyle"
+        android:text="Bao gồm bữa sáng" />
+    <CheckBox
+        android:id="@+id/chk_xeduadon"
+        style="@style/LabelStyle"
+        android:text="Xe đưa đón sân bay" />
+    <EditText
+        android:id="@+id/edt_sotien"
+        style="@style/TextStyle"
+        android:enabled="false"
+        android:hint="Thành tiền"
+        android:textColor="#ff0000" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_tinhtien"
+            style="@style/ButtonStyle"
+            android:onClick="TinhTien"
+            android:text="Tính tiền" />
+        <Button
+            android:id="@+id/btn_thuexe"
+            style="@style/ButtonStyle"
+            android:onClick="DatThue"
+            android:text="Đặt thuê" />
+        <Button
+            android:id="@+id/btn_dong"
+            style="@style/ButtonStyle"
+            android:onClick="DongActivity"
+            android:text="Đóng" />
+    </LinearLayout>
+</LinearLayout>
